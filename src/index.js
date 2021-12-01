@@ -30,14 +30,23 @@ buttons.forEach(button => {
     });
  });
 
-//change background color with click event
+//change background color with click and dblclick events
 
 window.addEventListener('click', () => document.body.style.backgroundColor = '#b4ede0');
 
+window.addEventListener('dblclick', () => document.body.style.backgroundColor = 'white');
 
+
+//keyup and keydown on spacebar
 
 document.addEventListener('keydown', event => {
-    if (32 === event.key) {
-      document.body.style.backgroundColor = 'white';
+    if (event.code === 'Space') {
+      document.body.style.color = 'blue';
     }
-  })
+  });
+
+  document.addEventListener('keyup', event => {
+    if (event.code === 'Space') {
+      document.body.style.color = 'black';
+    }
+  });
