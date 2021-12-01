@@ -37,7 +37,7 @@ window.addEventListener('click', () => document.body.style.backgroundColor = '#b
 window.addEventListener('dblclick', () => document.body.style.backgroundColor = 'white');
 
 
-//keyup and keydown on spacebar
+//keyup and keydown on spacebar to change text color
 
 document.addEventListener('keydown', event => {
     if (event.code === 'Space') {
@@ -50,3 +50,8 @@ document.addEventListener('keydown', event => {
       document.body.style.color = 'black';
     }
   });
+
+
+  window.onload = () => {
+    alert('page is fully loaded');
+  };
